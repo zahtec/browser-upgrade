@@ -1,0 +1,13 @@
+include _main.pug
+mixin browser(title, url)
+	.browser
+		img(draggable='false' alt=`${title} logo` src=`data:image/png;base64,${images[title.toLowerCase()]}` height='130px')
+		h1.browser-title= title
+		a.button(href=url) DOWNLOAD
+#outdated
+	h1#title It's time to upgrade to a modern browser!
+	p#caption The browser you are currently using is old and doesn't support modern-day features! You are lacking on current security updates, extensions + customization, and speed. It also makes it hard for us developers since we have to add extra support. Help us out and #[span(style='text-decoration: underline;') download one of the following options below]:
+	#browsers
+		+browser('Firefox', 'https://www.mozilla.org/en-US/firefox/new/')
+		+browser('Chrome', 'https://www.google.com/chrome/')
+		+browser('Edge', 'https://www.microsoft.com/en-us/edge')
