@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Modern Browser Upgrade</title>
+		<style>
+			body {
+				margin: 0;
+				font-family: sans-serif;
+				text-align: center;
+			}
+
+			h1 {
+				margin: 0;
+			}
+
+			#title {
+				margin: 10% 0 0 0;
+				font-size: 2.5rem;
+			}
+
+			#caption {
+				font-size: 1.4rem;
+				max-width: 700px;
+				margin: 1.2rem auto 0 auto;
+			}
+
+			.und {
+				text-decoration: underline;
+			}
+
+			#browsers {
+				margin-top: 40px;
+			}
+			
+			.browser {
+				margin-right: 40px;
+				padding: 11px;
+				display: inline-block;
+				border-radius: 15px;
+				border: 3px solid rgb(175, 175, 175);
+			}
+
+			.button {
+				margin-top: 10px;
+				display: inline-block;
+				text-decoration: none;
+				background-color: rgb(27, 148, 255);
+				color: white;
+				padding: 10px;
+				border-radius: 7px;
+				font-size: 1.4rem;
+			}
+
+			#updated {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="outdated">
+			<h1 id="title">It's time to upgrade to a modern browser!</h1>
+			<p id="caption">The browser you are currently using is old and doesn't support modern-day features! You are lacking on current security updates, extensions + customization, and speed. It also makes it hard for us developers since we have to add extra support. Help us out and <span class="und">download one of the following options below</span>:</p>
+			<div id="browsers">
+				<div class="browser">
+					<img draggable="false" src="firefox.png" height="130px"></img>
+					<h1 class="browser-title">Firefox</h1>
+					<a href="https://www.mozilla.org/en-US/firefox/new/" class="button">DOWNLOAD</a>
+				</div>
+				<div class="browser">
+					<img draggable="false" src="chrome.png" height="130px"></img>
+					<h1 class="browser-title">Chrome</h1>
+					<a href="https://www.google.com/chrome/" class="button">DOWNLOAD</a>
+				</div>
+				<div class="browser">
+					<img draggable="false" src="edge.png" height="130px"></img>
+					<h1 class="browser-title">Edge</h1>
+					<a href="https://www.microsoft.com/en-us/edge" class="button">DOWNLOAD</a>
+				</div>
+				<div class="browser">
+					<img draggable="false" src="brave.png" height="130px"></img>
+					<h1 class="browser-title">Brave</h1>
+					<a href="https://brave.com/" class="button">DOWNLOAD</a>
+				</div>
+			</div>
+		</div>
+		<div id="updated">
+			<h1 id="title">Your browser is up to date!</h1>
+			<p id="caption">If you are seeing this page it is mostly likely an error and wasn't supposed to happen!</p>
+			<a onclick="history.go(-1)" style="cursor: pointer;" class="button">GO BACK</a>
+		</div>
+		<script defer>
+			if (!navigator.userAgent.includes('MSIE') || !navigator.userAgent.includes('Trident')) {
+				document.getElementById('outdated').style.display = 'none';
+				document.getElementById('updated').style.display = 'block';
+			}
+		</script>
+	</body>
+</html>
