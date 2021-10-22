@@ -50,7 +50,7 @@
 				font-size: 1.4rem;
 			}
 
-			#updated {
+			#updated, #outdated {
 				display: none;
 			}
 		</style>
@@ -89,8 +89,9 @@
 		</div>
 		<script defer>
 			if (!navigator.userAgent.includes('MSIE') || !navigator.userAgent.includes('Trident')) {
-				document.getElementById('outdated').style.display = 'none';
 				document.getElementById('updated').style.display = 'block';
+			} else {
+				document.getElementById('outdated').style.display = 'block';
 			}
 		</script>
 	</body>
