@@ -22,9 +22,9 @@ function render(isIE: boolean) {
 	return pug.renderFile(path('views', `${isIE ? 'out' : 'up'}dated.pug`), { images });
 }
 
-function _main(req: Request, res: Response, next: NextFunction) {
-	const { isIE } = useragent.parse(req.headers['user-agent'] || '');
-	isIE ? res.type('html').send(render(isIE)) : next();
-}
-
-export default _main;
+export default function () {
+	return (req: Request, res: Response, next: NextFunction) => {
+		const { isIE } = useragent.parse(req.headers['user-agent'] || '');
+		isIE ? res.type('html').send(render(isIE)) : next();
+	}
+};

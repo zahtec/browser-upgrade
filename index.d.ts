@@ -1,2 +1,2 @@
-declare const _main: Function;
-export default _main;
+import { Request, Response, NextFunction } from 'express';
+export default function (): (req: Request, res: Response, next?: NextFunction) => void;

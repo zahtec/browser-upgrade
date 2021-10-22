@@ -21,8 +21,11 @@ function base64_encode(file) {
 function render(isIE) {
     return pug_1.default.renderFile(path('views', `${isIE ? 'out' : 'up'}dated.pug`), { images });
 }
-function _main(req, res, next) {
-    const { isIE } = express_useragent_1.default.parse(req.headers['user-agent'] || '');
-    isIE ? res.type('html').send(render(isIE)) : next();
+function default_1() {
+    return (req, res, next) => {
+        const { isIE } = express_useragent_1.default.parse(req.headers['user-agent'] || '');
+        isIE ? res.type('html').send(render(isIE)) : next();
+    };
 }
-exports.default = _main;
+exports.default = default_1;
+;
