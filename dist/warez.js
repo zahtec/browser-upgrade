@@ -13,7 +13,7 @@ const images = {
     edge: base64_encode(path('img', 'edge.png')),
 };
 function path(...args) {
-    return path_1.default.join(process.cwd(), ...args);
+    return path_1.default.join(__dirname, '..', ...args);
 }
 function base64_encode(file) {
     return Buffer.from(fs_extra_1.default.readFileSync(file)).toString('base64');

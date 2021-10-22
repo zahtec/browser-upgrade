@@ -11,7 +11,7 @@ const images = {
 };
 
 function path(...args: string[]) {
-	return Path.join(process.cwd(), ...args);
+	return Path.join(__dirname, '..', ...args);
 }
 
 function base64_encode(file: string) {
