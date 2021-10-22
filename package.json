@@ -10,6 +10,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/test.js",
+    "test": "echo hello",
     "dev": "npm run build && npm run start",
     "prepublish": "npm run build",
     "publish": "np"
