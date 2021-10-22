@@ -1,0 +1,43 @@
+{
+  "name": "browser-upgrade",
+  "version": "0.0.0",
+  "description": "A simple redirect website that notifies IE users to upgrade to a modern-day browser",
+  "main": "app.js",
+  "engines": {
+    "node": ">=14.x.x",
+    "npm": ">=7.x.x"
+  },
+  "scripts": {
+    "install": "npm i -g typescript",
+    "build": "tsc",
+    "dev": "npm run build && npm run start",
+    "test": "npm run dev",
+    "start": "node dist/test.js"
+  },
+  "repository": "github:zahtec/browser-upgrade",
+  "keywords": [
+    "browser",
+    "upgrade",
+    "internet-explorer"
+  ],
+  "contributors": [
+    "Zahtec (https://github.com/zahtec)",
+    "tycrek <t@tycrek.com> (https://tycrek.com/)"
+  ],
+  "license": "ISC",
+  "bugs": "https://github.com/zahtec/browser-upgrade/issues",
+  "homepage": "https://github.com/zahtec/browser-upgrade#readme",
+  "dependencies": {
+    "@tsconfig/node14": "^1.0.1",
+    "express": "^4.17.1",
+    "express-useragent": "^1.0.15",
+    "fs-extra": "^10.0.0",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/express-useragent": "^1.0.1",
+    "@types/fs-extra": "^9.0.13",
+    "@types/pug": "^2.0.5"
+  }
+}
