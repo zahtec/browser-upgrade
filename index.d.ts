@@ -1,3 +1,2 @@
-import { Router } from 'express'
-declare const router: Router;
-export default router;
+declare const _main: Function;
+export default _main;
