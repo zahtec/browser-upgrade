@@ -1,18 +1,18 @@
 {
-  "name": "browser-upgrade",
+  "name": "express-browser-upgrade",
   "version": "0.0.0",
-  "description": "A simple redirect website that notifies IE users to upgrade to a modern-day browser",
-  "main": "app.js",
+  "description": "A simple Express middleware that notifies Internet Explorer users to upgrade to a modern-day browser.",
+  "main": "dist/warez.js",
   "engines": {
     "node": ">=14.x.x",
     "npm": ">=7.x.x"
   },
   "scripts": {
-    "install": "npm i -g typescript",
     "build": "tsc",
+    "start": "node dist/test.js",
     "dev": "npm run build && npm run start",
-    "test": "npm run dev",
-    "start": "node dist/test.js"
+    "prepublish": "npm run build",
+    "publish": "np"
   },
   "repository": "github:zahtec/browser-upgrade",
   "keywords": [
