@@ -1,6 +1,6 @@
 # Browser Upgrade
 
-A simple Express middleware program that notifies Internet Explorer users to upgrade to a modern-day browser.
+A simple Express middleware that notifies Internet Explorer users to upgrade to a modern-day browser.
 
 ## Usage
 
